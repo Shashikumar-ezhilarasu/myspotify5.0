@@ -140,3 +140,17 @@
     opacity: 0.7; /* Placeholder opacity */
   }
   
+
+  .menu-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  .menu-image {
+    margin-right: 10px; /* Add space between image and text */
+  }
+  .item-info{
+    display:inline;
+    
+  }

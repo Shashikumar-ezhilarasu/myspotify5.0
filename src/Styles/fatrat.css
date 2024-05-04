@@ -1,19 +1,13 @@
-.bannerbox{
-  height: 350px;
-  width: 100%;
-  background-color: rgb(0, 0, 0);
-  
-  background-size: cover; /* Adjusts the size of the background image */
-  background-position: center; /* Centers the background image */
-  margin-top: 0%;
-  margin-left: 410px;
+.bannerboxf {
+    height: 350px;
+    width: 100%;
+    background-image: url('/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/fatrat.jpeg');
+    background-size: cover; /* Adjusts the size of the background image */
+    background-position: center; /* Centers the background image */
+    margin-top: 0%;
+    margin-left: 410px;
 }
-.bannerbox img{
-  margin-left: 5px;
-  margin-top: 3px;
-  height: 350px;
-  width: 800px;
-}
+
 
 .list1{
     height: 80px;
@@ -70,18 +64,7 @@
   width: 80px;
   margin-left: 20px;
 }
-.title{
-  font: white;
-}
-
 h1{
-  font: white;
-  height: 30px;
-  font-weight: 800px;
-  margin-left: 30px;
-  margin-top: 10px;
-  padding: 30px;
-}
-h3{
-  font: white;
+    color: white;
+    
 }
