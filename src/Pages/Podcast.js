@@ -11,7 +11,7 @@ export default function Podcast(){
         <div>
 
                 <Leftmenu />
-            <div className="bannerbox">
+            <div className="bannerboxpd">
              <img src={tedx} alt="" />
              <h1></h1>
             </div>

@@ -86,12 +86,12 @@
   
   .sidebar {
     background: linear-gradient(to bottom, #000000, #1e1e1e); /* Gradient background */
-    color: #fff; /* Text color */
-    width: 600px; /* Increased width */
-    height: 100vh; /* Full height */
-    padding: 20px; /* Padding for content */
+    color: #fff; 
+    width: 600px; 
+    height: 100vh; 
+    padding: 20px; 
     box-sizing: border-box;
-    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-y: auto; 
   }
   
   .sidebar-btn {

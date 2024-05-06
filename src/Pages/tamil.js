@@ -40,7 +40,9 @@ export default function Tamil(){
                 <img src={leo} alt="Liked Songs" />
                 <div className="item-info">
                 
-                <p>Badass (from "Leo") {"\t"} anirudh ravichander</p>
+                <p1>Badass (from "Leo") {"\t"} anirudh ravichander</p1>
+                <br></br>
+                <p2>hello</p2>
                 </div>
             </div>
             <div className="menu-itempg">

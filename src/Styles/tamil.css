@@ -51,7 +51,7 @@
     flex-grow: 1;
   }
   
-  .menu-itempg p {
+  .menu-itempg p1 {
     margin: 0;
     font-size: 16px; /* Font size */
     color:white
@@ -84,4 +84,11 @@ h1{
 }
 h3{
   font: white;
+}
+
+.menu-itempg p2 {
+  margin: 0;
+  font-size: 13px; /* Font size */
+  color:white;
+  padding: 3px;
 }
