@@ -1,0 +1,15 @@
+.englishbody{
+    background-color: white;
+    font: black;
+    height: auto;
+    width: auto;
+}
+
+.displayplaylist{
+
+    background-color: white;
+    font: black;
+    margin-left: 400px;
+    height: 500px;
+    width: 600px;
+}

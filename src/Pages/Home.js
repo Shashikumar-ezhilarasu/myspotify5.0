@@ -1,6 +1,9 @@
 import Header from "../Components/Header";
 import { Link } from 'react-router-dom';
 import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/home.css'
+import PlaylistEmbed from "../playlistId";
+import PlaylistDetails from "../PlaylistDetails";
+
 export default function Home(){
     return(
         <div>
@@ -16,6 +19,12 @@ export default function Home(){
             <Link to="/hindi" className="about-link">
                 <button>Hindi</button>
             </Link>
+
+            <Link to="/login">
+      <button>Login with Spotify</button>
+    </Link>
+            <PlaylistEmbed />
+            <PlaylistDetails />
         </div>
     )
 }

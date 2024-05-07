@@ -142,3 +142,18 @@ function Leftmenu() {
 }
 
 export {Leftmenu};
+
+
+
+
+
+//BQALGJzVK3liPiz9hcqHwqe3QUM_gNwvEKQ0v8eDpOx_8eVgf3Spl279QJ8DofiIiA6gPjyFd66gq3bzkmclg-UDkoBfZ4ckkSmBEVUxcxHf_2Enjow
+
+// curl --request GET \
+//   --url https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n \
+//   --header 'Authorization: Bearer BQALGJzVK3liPiz9hcqHwqe3QUM_gNwvEKQ0v8eDpOx_8eVgf3Spl279QJ8DofiIiA6gPjyFd66gq3bzkmclg-UDkoBfZ4ckkSmBEVUxcxHf_2Enjow'
+
+
+// curl -X POST "https://accounts.spotify.com/api/token" \
+//      -H "Content-Type: application/x-www-form-urlencoded" \
+//      -d "grant_type=client_credentials&client_id=024ae176a1ba48738fe7717211279b06&client_secret=d5a784767d6245778f00c6d0df71f6e0"

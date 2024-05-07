@@ -14,6 +14,7 @@ import photo4 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/A
 import photo5 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/d2.jpeg'
 import cover3 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/cover1.jpeg'
 import cover4 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/cover2.jpeg'
+import PlaylistDetails from "../PlaylistDetails";
 
 export default function Tamil(){
     return(
@@ -108,7 +109,7 @@ export default function Tamil(){
                 <p></p>
                 </div>
             </div>
-
+        <PlaylistDetails  />
             
         </div>
         </div>
