@@ -3,7 +3,7 @@ import { Leftmenu } from '../Components/Leftmenu';
 import Playicon from '../Assets/Images/platicon.png';
 import banner2 from '../Assets/Images/BANNER10.png';
 
-function TamilPage() {
+function PunjabiPage() {
     const [tracks, setTracks] = useState([]);
     const [currentTrack, setCurrentTrack] = useState(null);
     const audioRef = useRef(null);
@@ -19,10 +19,10 @@ function TamilPage() {
 
     const getTracks = async () => {
         try {
-            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=tamil&type=track");
+            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=punjabi&type=track");
             const convertedData = await data.json();
             console.log(convertedData);
-            setTracks(convertedData.tracks.items); // Assuming `tracks` is an array inside `convertedData`
+            setTracks(convertedData.tracks.items);
         } catch (error) {
             console.error("Error fetching tracks:", error);
         }
@@ -54,10 +54,10 @@ function TamilPage() {
                             playTrack(song.preview_url);
                             setCurrentTrack(song);
                         }}>
-                            <img src={song.album.images[0].url} alt="Liked Songs" />
+                            <img src={song.album.images[0].url} alt="Album Artwork" />
                             <div className="item-info">
-                                <p>{song.title}</p>
-                                <p>{song.artist}</p>
+                                <p>{song.album.name}</p>
+                                <p>{song.artists.map(artist => artist.name).join(', ')}</p>
                             </div>
                         </div>
                     ))}
@@ -75,7 +75,7 @@ function TamilPage() {
                 {currentTrack && (
                     <div className="currently-playing">
                         {/* <p>Currently Playing:</p>
-                        <p>{currentTrack.title} - {currentTrack.artist}</p> */}
+                        <p>{currentTrack.title} - {currentTrack.artists.map(artist => artist.name).join(', ')}</p> */}
                     </div>
                 )}
             </div>
@@ -83,4 +83,4 @@ function TamilPage() {
     );
 }
 
-export default TamilPage;
+export default PunjabiPage;

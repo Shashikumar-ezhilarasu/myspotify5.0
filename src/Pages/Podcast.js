@@ -1,101 +1,86 @@
-import Header from "../Components/Header";
-import { Link } from 'react-router-dom';
-import { Leftmenu } from "../Components/Leftmenu";
-import logo from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/slogo.png'
-import MyPlaylists from "../Components/MyPlaylist";
-import Playicon from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/platicon.png'
-import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/podcast.css'
-import tedx from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tedx.jpeg'
-export default function Podcast(){
-    return(
-        <div>
+import React, { useState, useEffect, useRef } from 'react';
+import { Leftmenu } from '../Components/Leftmenu';
+import Playicon from '../Assets/Images/platicon.png';
+import banner2 from '../Assets/Images/BANNER10.png';
 
+function PodcastPage() {
+    const [tracks, setTracks] = useState([]);
+    const [currentTrack, setCurrentTrack] = useState(null);
+    const audioRef = useRef(null);
+
+    const playTrack = (previewUrl) => {
+        audioRef.current.src = previewUrl;
+        audioRef.current.play();
+    }
+
+    const changeSpeed = (speed) => {
+        audioRef.current.playbackRate = speed;
+    }
+
+    const getTracks = async () => {
+        try {
+            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=podcast&type=track");
+            const convertedData = await data.json();
+            console.log(convertedData);
+            setTracks(convertedData.tracks.items);
+        } catch (error) {
+            console.error("Error fetching tracks:", error);
+        }
+    }
+
+    useEffect(() => {
+        getTracks();
+    }, []);
+
+    return (
+        <>
+            <div>
                 <Leftmenu />
-            <div className="bannerboxpd">
-             <img src={tedx} alt="" />
-             <h1></h1>
-            </div>
-            
-            <div className="list1">
-            <div className="playimg">
-                <img src={Playicon} alt="" />
+                <div className="bannerbox">
+                    <div className="bannerimg">
+                        <img src={banner2} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="list2">
-                
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
+
+                <div className="list1">
+                    <div className="playimg">
+                        <img src={Playicon} alt="" />
+                    </div>
                 </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
-                </div>
-            </div>
-            <div className="menu-itempg">
-                <img src={logo} alt="Liked Songs" />
-                <div className="item-info">
-                <p>Liked Songs</p>
-                <p></p>
+
+                <div className="list2">
+                    {tracks.map((song, index) => (
+                        <div className="menu-itempg" key={index} onClick={() => {
+                            playTrack(song.preview_url);
+                            setCurrentTrack(song);
+                        }}>
+                            <img src={song.album.images[0].url} alt="Podcast Artwork" />
+                            <div className="item-info">
+                                <p>{song.album.name}</p>
+                                <p>{song.artists.map(artist => artist.name).join(', ')}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
 
-            
-        </div>
-        </div>
-    )
+            {/* Music Player */}
+            <div className="music-player">
+                <audio ref={audioRef} controls className="w-100"></audio>
+                <div className="text-center">
+                    <button onClick={() => changeSpeed(1)} className="btn btn-secondary mx-1">Normal Speed</button>
+                    <button onClick={() => changeSpeed(1.5)} className="btn btn-secondary mx-1">1.5x Speed</button>
+                    <button onClick={() => changeSpeed(2)} className="btn btn-secondary mx-1">2x Speed</button>
+                </div>
+                {currentTrack && (
+                    <div className="currently-playing">
+                        {/* <p>Currently Playing:</p>
+                        <p>{currentTrack.title} - {currentTrack.artists.map(artist => artist.name).join(', ')}</p> */}
+                    </div>
+                )}
+            </div>
+        </>
+    );
 }
+
+export default PodcastPage;

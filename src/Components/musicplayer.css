@@ -1,0 +1,18 @@
+/* MusicPlayer.css */
+.music-player {
+    background-color: #fff;
+    padding: 10px;
+    border-top: 1px solid #ccc;
+  }
+  
+  .btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+  }
+  

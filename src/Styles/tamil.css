@@ -92,3 +92,233 @@ h3{
   color:white;
   padding: 3px;
 }
+
+/* Add your CSS styles for the music player here */
+.music-player {
+  background-color: #f1f1f1;
+  padding: 10px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.music-player audio {
+  margin-bottom: 10px;
+}
+
+.currently-playing {
+  margin-top: 10px;
+}
+
+.menu-itempg {
+  /* Add your styles for the individual song item here */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-itempg:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-itempg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+/* Add any other styles as needed */
+/* Updated CSS for the music player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff; /* Background color of the player */
+  padding: 10px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.music-player audio {
+  margin-bottom: 10px;
+}
+
+.currently-playing {
+  margin-top: 10px;
+}
+
+.menu-itempg {
+  /* Add your styles for the individual song item here */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-itempg:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-itempg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.item-info {
+  flex-grow: 1;
+}
+
+/* Add any other styles as needed */
+/* Updated CSS for the music player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  padding: 20px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.music-player audio {
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.currently-playing {
+  margin-top: 10px;
+}
+
+.menu-itempg {
+  /* Add your styles for the individual song item here */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-itempg:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-itempg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.item-info {
+  flex-grow: 1;
+  color: #ddd;
+}
+
+/* Add any other styles as needed */
+/* Updated CSS for the music player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: transparent; /* Set background color to transparent */
+  padding: 20px;
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.music-player audio {
+  margin-bottom: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Set a semi-transparent background color for the audio player */
+  border-radius: 5px;
+}
+
+.currently-playing {
+  margin-top: 10px;
+}
+
+.menu-itempg {
+  /* Add your styles for the individual song item here */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-itempg:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-itempg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.item-info {
+  flex-grow: 1;
+  color: #ddd;
+}
+
+/* Add any other styles as needed */
+/* Updated CSS for the music player */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color:black;
+  padding: 10px; /* Reduced padding */
+  box-shadow: 0px -2px 4px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.music-player audio {
+  margin-bottom: 10px; /* Adjusted margin */
+  width: calc(100% - 20px); /* Adjusted width to consider padding */
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.currently-playing {
+  margin-top: 10px;
+}
+
+.menu-itempg {
+  /* Add your styles for the individual song item here */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-itempg:hover {
+  background-color: #f9f9f9;
+}
+
+.menu-itempg img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.item-info {
+  flex-grow: 1;
+  color: #ddd;
+}
+
+/* Add any other styles as needed */

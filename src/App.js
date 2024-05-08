@@ -1,22 +1,22 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Home from './Pages/Home';
-import English from './Pages/English';
-import Hindi from './Pages/Hindi';
-import Tamil from './Pages/tamil';
-import Liked from './Pages/liked';
-import Podcast from './Pages/Podcast';
-import Fatrat from './Pages/fatrat';
-import TopTracks from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/TopTracks.js';
 
-import Login from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/Login.js';
+import TrackCard from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Components/Trackcard.js';
+import MusicPlayer from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Components/Musicplayer.js';
+import Home from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/Home.js';
+import English from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/English.js';
+import Hindi from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/Hindi.js';
+import Tamil from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/tamil.js';
+import Liked from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/liked.js';
+import Podcast from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/Podcast.js';
+import Fatrat from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Pages/fatrat.js';
+import PunjabiPage from './Pages/Pungabi';
 
-
-
-
-export default function App() {
+function App() {
   return (
     <div>
       <BrowserRouter>
+        
         <Routes>
           <Route index element={<Home />} />
           <Route path='/home' element={<Home />} />
@@ -26,10 +26,20 @@ export default function App() {
           <Route path='/liked' element={<Liked />} />
           <Route path='/podcast' element={<Podcast />} />
           <Route path='/fatrat' element={<Fatrat />} />
-          <Route path='/top-tracks' element={<TopTracks />} /> {/* Route for displaying top tracks */}
-          <Route path='/login' element={<Login/>} /> {/* Route for authentication */}
+          <Route path='/punjabi' element={<PunjabiPage />} />
         </Routes>
+        {/* <div className="container">
+          <div className="row">
+
+            {tracks.map(track => (
+              <TrackCard key={track.id} track={track} playTrack={playTrack} />
+            ))}
+          </div>
+        </div> */}
+        
       </BrowserRouter>
     </div>
-  )
+  );
 }
+
+export default App;

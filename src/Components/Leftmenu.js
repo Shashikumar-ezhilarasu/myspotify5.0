@@ -5,10 +5,11 @@ import like from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Ass
 import spb from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/spb.jpeg'
 import { Link } from 'react-router-dom';
 import tedx from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tedx.jpeg'
-import fatrat from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/fatrat.jpeg'
-import rahaman from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/rahaman.jpeg'
-import remo from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/remo.jpeg'
 
+import remo from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/remo.jpeg'
+import englisheng from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/energyeng.jpeg'
+import bollywood from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/bollywood.jpeg'
+import punjabi from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/punjabi.jpeg'
 
 function Leftmenu() {
   return (
@@ -39,38 +40,45 @@ function Leftmenu() {
     </ul> */}
 
             <div className="menu-item">
-            <Link to="/podcast">
+            <Link to="/english">
+                <img src={englisheng} alt="Your Episodes" />
+                </Link>
+                <div className="item-info">
+                <p>ENERGETIC ENGLISH </p>
+                <p>24'Top Hits</p>
+                </div>
+            </div>
+            <div className="menu-item">
+            <Link to ="/podcast">
                 <img src={tedx} alt="Your Episodes" />
                 </Link>
                 <div className="item-info">
-                <p>Your Episodes</p>
-                <p>Personal podcasts</p>
-                </div>
-            </div>
-            <div className="menu-item">
-                
-                <img src={fatrat} alt="Your Episodes" />
-                <div className="item-info">
-                <p>The Fat Rat</p>
+                <p>TEDx pocasts</p>
                 <p></p>
                 </div>
             </div>
             <div className="menu-item">
-                <img src={spb} alt="Your Episodes" />
+                <Link to="/hindi">
+                <img src={bollywood} alt="Your Episodes" />
+                </Link>
                 <div className="item-info">
-                <p>SPB Hits(tamil)</p>
+                <p>BOLLYWOOD - HITS</p>
                 
                 </div>
             </div>
             <div className="menu-item">
-                <img src={rahaman} alt="Your Episodes" />
+                <Link to ="/punjabi">
+                <img src={punjabi} alt="Your Episodes" />
+                </Link>
                 <div className="item-info">
-                <p>Rahaman vibes</p>
-                <p></p>
+                <p>HOT HIT's </p>
+                <p>Punjabi</p>
                 </div>
             </div>
             <div className="menu-item">
+                <Link>
                 <img src={remo} alt="Your Episodes" />
+                </Link>
                 <div className="item-info">
                 <p>Remo (Original motion..)</p>
                 <p></p>

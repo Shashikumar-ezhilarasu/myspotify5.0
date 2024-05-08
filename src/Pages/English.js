@@ -1,27 +1,86 @@
-import Header from "../Components/Header";
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useRef } from 'react';
+import { Leftmenu } from '../Components/Leftmenu';
+import Playicon from '../Assets/Images/platicon.png';
+import banner2 from '../Assets/Images/BANNER10.png';
 
-import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/style.css'
-import PlaylistDetails from "../PlaylistDetails";
-import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/english.css'
-import PlaylistComponent from "../Components/Playlistcomponent";
-import TopTracks from "../TopTracks";
-export default function English(){
-    return(
-        <div className="englishbody">
-            <Header />
-            
-            <p>This is an English songs page</p>
-            <Link to="/home" className="about-link">
-                <button>Home</button>
-            </Link>
-            <div className="displayplaylist">
-            <PlaylistDetails />
-            <PlaylistComponent />
-            <TopTracks />
-            
+function EnglishPage() {
+    const [tracks, setTracks] = useState([]);
+    const [currentTrack, setCurrentTrack] = useState(null);
+    const audioRef = useRef(null);
+
+    const playTrack = (previewUrl) => {
+        audioRef.current.src = previewUrl;
+        audioRef.current.play();
+    }
+
+    const changeSpeed = (speed) => {
+        audioRef.current.playbackRate = speed;
+    }
+
+    const getTracks = async () => {
+        try {
+            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=english&type=track");
+            const convertedData = await data.json();
+            console.log(convertedData);
+            setTracks(convertedData.tracks.items);
+        } catch (error) {
+            console.error("Error fetching tracks:", error);
+        }
+    }
+
+    useEffect(() => {
+        getTracks();
+    }, []);
+
+    return (
+        <>
+            <div>
+                <Leftmenu />
+                <div className="bannerbox">
+                    <div className="bannerimg">
+                        <img src={banner2} alt="" />
+                    </div>
+                </div>
+
+                <div className="list1">
+                    <div className="playimg">
+                        <img src={Playicon} alt="" />
+                    </div>
+                </div>
+
+                <div className="list2">
+                    {tracks.map((song, index) => (
+                        <div className="menu-itempg" key={index} onClick={() => {
+                            playTrack(song.preview_url);
+                            setCurrentTrack(song);
+                        }}>
+                            <img src={song.album.images[0].url} alt="Album Artwork" />
+                            <div className="item-info">
+                                <p>{song.name}</p>
+                                <p>{song.artists[0].name}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-             {/* Include the PlaylistDetails component here */}
-        </div>
-    )
+
+            {/* Music Player */}
+            <div className="music-player">
+                <audio ref={audioRef} controls className="w-100"></audio>
+                <div className="text-center">
+                    <button onClick={() => changeSpeed(1)} className="btn btn-secondary mx-1">Normal Speed</button>
+                    <button onClick={() => changeSpeed(1.5)} className="btn btn-secondary mx-1">1.5x Speed</button>
+                    <button onClick={() => changeSpeed(2)} className="btn btn-secondary mx-1">2x Speed</button>
+                </div>
+                {currentTrack && (
+                    <div className="currently-playing">
+                        {/* <p>Currently Playing:</p>
+                        <p>{currentTrack.name} - {currentTrack.artists[0].name}</p> */}
+                    </div>
+                )}
+            </div>
+        </>
+    );
 }
+
+export default EnglishPage;
