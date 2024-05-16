@@ -4,6 +4,7 @@ import Playicon from '../Assets/Images/platicon.png';
 import banner2 from '../Assets/Images/BANNER10.png';
 import banner5 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tamil.png'
 import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/tamil.css'
+import romance from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/adiye.jpeg'
 function Romantic() {
     const [tracks, setTracks] = useState([]);
     const [currentTrack, setCurrentTrack] = useState(null);
@@ -39,7 +40,7 @@ function Romantic() {
                 <Leftmenu />
                 <div className="bannerbox">
                     <div className="bannerimg">
-                        <img src={banner5} alt="" />
+                        <img src={romance} alt="" />
                     </div>
                 </div>
 
