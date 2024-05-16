@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Leftmenu } from '../Components/Leftmenu';
 import Playicon from '../Assets/Images/platicon.png';
 import banner2 from '../Assets/Images/BANNER10.png';
-
+import banner6 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tedtalks.png'
 function PodcastPage() {
     const [tracks, setTracks] = useState([]);
     const [currentTrack, setCurrentTrack] = useState(null);
@@ -38,7 +38,7 @@ function PodcastPage() {
                 <Leftmenu />
                 <div className="bannerbox">
                     <div className="bannerimg">
-                        <img src={banner2} alt="" />
+                        <img src={banner6} alt="" />
                     </div>
                 </div>
 

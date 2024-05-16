@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Leftmenu } from '../Components/Leftmenu';
 import Playicon from '../Assets/Images/platicon.png';
-import banner2 from '../Assets/Images/BANNER10.png';
+import banner12 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/punjaban.png';
 
 function PunjabiPage() {
     const [tracks, setTracks] = useState([]);
@@ -38,7 +38,7 @@ function PunjabiPage() {
                 <Leftmenu />
                 <div className="bannerbox">
                     <div className="bannerimg">
-                        <img src={banner2} alt="" />
+                        <img src={banner12} alt="" />
                     </div>
                 </div>
 

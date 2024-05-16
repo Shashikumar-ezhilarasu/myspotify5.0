@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Leftmenu } from '../Components/Leftmenu';
 import Playicon from '../Assets/Images/platicon.png';
 import banner2 from '../Assets/Images/BANNER10.png';
-import banner3 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/english.png'
-import banner9 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/Taylor.png'
-function EnglishPage() {
+import banner5 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tamil.png'
+import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/tamil.css'
+function Romantic() {
     const [tracks, setTracks] = useState([]);
     const [currentTrack, setCurrentTrack] = useState(null);
     const audioRef = useRef(null);
@@ -20,10 +20,10 @@ function EnglishPage() {
 
     const getTracks = async () => {
         try {
-            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=english&type=track");
+            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=tamil&type=track");
             const convertedData = await data.json();
             console.log(convertedData);
-            setTracks(convertedData.tracks.items);
+            setTracks(convertedData.tracks.items); // Assuming `tracks` is an array inside `convertedData`
         } catch (error) {
             console.error("Error fetching tracks:", error);
         }
@@ -39,8 +39,7 @@ function EnglishPage() {
                 <Leftmenu />
                 <div className="bannerbox">
                     <div className="bannerimg">
-                        <img src={banner9} alt="English" />
-                        
+                        <img src={banner5} alt="" />
                     </div>
                 </div>
 
@@ -56,10 +55,10 @@ function EnglishPage() {
                             playTrack(song.preview_url);
                             setCurrentTrack(song);
                         }}>
-                            <img src={song.album.images[0].url} alt="Album Artwork" />
+                            <img src={song.album.images[0].url} alt="Liked Songs" />
                             <div className="item-info">
-                                <p>{song.name}</p>
-                                <p>{song.artists[0].name}</p>
+                                <p>{song.title}</p>
+                                <p>{song.artist}</p>
                             </div>
                         </div>
                     ))}
@@ -77,7 +76,7 @@ function EnglishPage() {
                 {currentTrack && (
                     <div className="currently-playing">
                         {/* <p>Currently Playing:</p>
-                        <p>{currentTrack.name} - {currentTrack.artists[0].name}</p> */}
+                        <p>{currentTrack.title} - {currentTrack.artist}</p> */}
                     </div>
                 )}
             </div>
@@ -85,4 +84,4 @@ function EnglishPage() {
     );
 }
 
-export default EnglishPage;
+export default Romantic;

@@ -5,12 +5,12 @@ import like from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Ass
 import spb from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/spb.jpeg'
 import { Link } from 'react-router-dom';
 import tedx from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tedx.jpeg'
-
+import lover from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/loverr.jpeg'
 import remo from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/remo.jpeg'
 import englisheng from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/energyeng.jpeg'
 import bollywood from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/bollywood.jpeg'
 import punjabi from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/punjabi.jpeg'
-
+import cover45 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/adiye.jpeg'
 function Leftmenu() {
   return (
     <div className='leftMenu'>
@@ -76,25 +76,29 @@ function Leftmenu() {
                 </div>
             </div>
             <div className="menu-item">
-                <Link>
+                <Link to ="/tamil">
                 <img src={remo} alt="Your Episodes" />
                 </Link>
                 <div className="item-info">
-                <p>Remo (Original motion..)</p>
+                <p>TAMIL Top Hits</p>
                 <p></p>
                 </div>
             </div>
             <div className="menu-item">
-                <img src={logo} alt="Your Episodes" />
+                <Link to ="/english">
+                <img src={lover} alt="Your Episodes" />
+                </Link>
                 <div className="item-info">
-                <p>SPB Hits(tamil)</p>
+                <p>Lover - Taylor swift</p>
                 <p></p>
                 </div>
             </div>
             <div className="menu-item">
-                <img src={logo} alt="Your Episodes" />
+                <Link to ="/tamil">
+                <img src={cover45} alt="Your Episodes" />
+                </Link>
                 <div className="item-info">
-                <p>SPB Hits(tamil)</p>
+                <p>Romantic Tamil   ❤️</p>
                 <p></p>
                 </div>
             </div>

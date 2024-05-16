@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Leftmenu } from '../Components/Leftmenu';
 import Playicon from '../Assets/Images/platicon.png';
 import banner2 from '../Assets/Images/BANNER10.png';
-
+import banner5 from '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Assets/Images/tamil.png'
+import '/Users/shashikumarezhil/Documents/Spotify5.0/myspotify/src/Styles/tamil.css'
 function TamilPage() {
     const [tracks, setTracks] = useState([]);
     const [currentTrack, setCurrentTrack] = useState(null);
@@ -38,7 +39,7 @@ function TamilPage() {
                 <Leftmenu />
                 <div className="bannerbox">
                     <div className="bannerimg">
-                        <img src={banner2} alt="" />
+                        <img src={banner5} alt="" />
                     </div>
                 </div>
 

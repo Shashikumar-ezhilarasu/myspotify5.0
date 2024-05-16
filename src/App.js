@@ -18,7 +18,7 @@ function App() {
       <BrowserRouter>
         
         <Routes>
-          <Route index element={<Home />} />
+          <Route index element={<English />} />
           <Route path='/home' element={<Home />} />
           <Route path='/english' element={<English />} />
           <Route path='/hindi' element={<Hindi />} />
