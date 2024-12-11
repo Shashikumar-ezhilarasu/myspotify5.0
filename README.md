@@ -30,7 +30,7 @@ Includes playback controls such as play, pause, skip, and volume adjustment, alo
 ## Usage
 Clone the repository
 
-Create a .env file in the root directory and add your Spotify API credentials:
+Create a .env file in the root directory and add your Spotify API credentials :
 
 env
 Copy code
