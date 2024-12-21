@@ -1,3 +1,4 @@
+<img width="1416" alt="image" src="https://github.com/user-attachments/assets/3c0bc3b7-62f1-4094-b6a8-c7ef207626e5" />
 
 ## Spotify Clone with React.js and API Integration
 This project is a clone of the popular music streaming service Spotify, built using React.js and integrated with the Spotify API. It provides users with a familiar interface for discovering, playing, and managing music tracks and playlists.
