@@ -19,7 +19,7 @@ function HindiPage() {
 
     const getTracks = async () => {
         try {
-            const response = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=hindi&type=track");
+            const response = await fetch("YOUR API KEY");
             const data = await response.json();
             console.log(data);
             setTracks(data.tracks.items);
