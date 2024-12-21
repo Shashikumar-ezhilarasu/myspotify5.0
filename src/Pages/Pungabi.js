@@ -19,7 +19,7 @@ function PunjabiPage() {
 
     const getTracks = async () => {
         try {
-            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=punjabi&type=track");
+            const data = await fetch("YOUR API KEY");
             const convertedData = await data.json();
             console.log(convertedData);
             setTracks(convertedData.tracks.items);
