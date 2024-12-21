@@ -19,7 +19,7 @@ function PodcastPage() {
 
     const getTracks = async () => {
         try {
-            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=podcast&type=track");
+            const data = await fetch("Your API KEY");
             const convertedData = await data.json();
             console.log(convertedData);
             setTracks(convertedData.tracks.items);
