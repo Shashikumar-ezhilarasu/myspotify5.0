@@ -20,7 +20,7 @@ function TamilPage() {
 
     const getTracks = async () => {
         try {
-            const data = await fetch("https://v1.nocodeapi.com/alexx2605/spotify/INnNDkPAyPPEcsKU/search?q=tamil&type=track");
+            const data = await fetch("YOUR API KEY");
             const convertedData = await data.json();
             console.log(convertedData);
             setTracks(convertedData.tracks.items); // Assuming `tracks` is an array inside `convertedData`
